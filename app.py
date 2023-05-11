@@ -221,7 +221,7 @@ st.write(future_data)
 
 data1=data.tail(1)
 st.write(data1)
-future_data=pd.merge(future_data,data1,how='inner')
+future_data=pd.merge(data1,future_data,how='outer')
 st.write('after appending')
 st.write(future_data)
 #future_data.append(data1,ignore_index=True)
