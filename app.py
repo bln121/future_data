@@ -237,7 +237,7 @@ future_data.at[1,"prediction_open"]=round(prediction_open0,2)
 future_data.at[1,"prediction_close"]=round(prediction_close0,2)#Prediction tomorrow's value
 
 #Converting string format date into date  and below is the code to insert the date in future_data dataframe
-
+'''
 from datetime import datetime
 
 
@@ -245,4 +245,5 @@ date_str=future_data['Date'].iloc[0]
 tomorrow = datetime.strptime(date_str, '%Y-%m-%d').date() + timedelta(1)
 future_data['Date'].iloc[1] = tomorrow
 future_data.index = future_data.index + 1
+'''
 st.write(future_data)
