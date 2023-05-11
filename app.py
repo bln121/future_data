@@ -214,16 +214,13 @@ for k in range(0,2):
 #prediction of future data
 st.subheader("Prediction of future data")
 
-st.write(round(prediction_open1,2))
-st.write(round(prediction_close1,2))
 future_data = pd.DataFrame(columns = ["Date","Open","prediction_open","accuracy_open","High","Low","Close","prediction_close","accuracy_close","Adj Close","Volume"])
 st.write(future_data)
 
 data1=data.tail(1)
-st.write(data1)
+
 future_data=pd.merge(data1,future_data,how='outer')
-st.write('after appending')
-st.write(future_data)
+
 #future_data.append(data1,ignore_index=True)
 #future_data=pd.concate([future_data,data.tail(1)])
 
@@ -239,7 +236,7 @@ future_data.at[1,"prediction_open"]=round(prediction_open0,2)
 future_data.at[1,"prediction_close"]=round(prediction_close0,2)#Prediction tomorrow's value
 
 #Converting string format date into date  and below is the code to insert the date in future_data dataframe
-'''
+
 from datetime import datetime
 
 
@@ -247,5 +244,5 @@ date_str=future_data['Date'].iloc[0]
 tomorrow = datetime.strptime(date_str, '%Y-%m-%d').date() + timedelta(1)
 future_data['Date'].iloc[1] = tomorrow
 future_data.index = future_data.index + 1
-'''
+
 st.write(future_data)
