@@ -213,11 +213,16 @@ for k in range(0,2):
 
 #prediction of future data
 st.subheader("Prediction of future data")
+
 st.write(round(prediction_open1,2))
 st.write(round(prediction_close1,2))
 future_data = pd.DataFrame(columns = ["Date","Open","prediction_open","accuracy_open","High","Low","Close","prediction_close","accuracy_close","Adj Close","Volume"])
+st.write(future_data)
 data1=data.tail(1)
-future_data.append(data1,ignore_index=True)
+future_data=pd.merge(future_data,data1)
+st.write('after appending')
+st.write(future_data)
+#future_data.append(data1,ignore_index=True)
 #future_data=pd.concate([future_data,data.tail(1)])
 
 future_data.at[0,"prediction_open"]=round(prediction_open1,2)
