@@ -215,7 +215,7 @@ for k in range(0,2):
 st.subheader("Prediction of future data")
 
 future_data = pd.DataFrame(columns = ["Date","Open","prediction_open","accuracy_open","High","Low","Close","prediction_close","accuracy_close","Adj Close","Volume"])
-st.write(future_data)
+
 
 data1=data.tail(1)
 
