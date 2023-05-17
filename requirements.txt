@@ -5,6 +5,6 @@
  plotly
  matplotlib
  tensorflow
- prophet==1.0.1
+ prophet
  numpy
  Scikit-learn
