@@ -6,5 +6,6 @@
  matplotlib
  tensorflow
  prophet
+ holidays
  numpy
  Scikit-learn
