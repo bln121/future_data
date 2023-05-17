@@ -6,6 +6,5 @@
  matplotlib
  tensorflow
  prophet==1.0.1
- holidays==0.10.5.2
  numpy
  Scikit-learn
