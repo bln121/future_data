@@ -1,4 +1,5 @@
- pandas
+pip ==23.1.2
+pandas
  numpy
  streamlit 
  yfinance
